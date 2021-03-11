@@ -18,7 +18,7 @@ from pymyarena.api import Api
 api = Api('token_here')
 response = api.status()
 
-print(response)  # noqa:WPS421
+print(response)
 # ServerStatus(status='OK', online=1, ...)
 ```
 

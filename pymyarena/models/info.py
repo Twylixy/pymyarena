@@ -1,8 +1,10 @@
 from dataclasses import dataclass
 
+from pymyarena.models.abc import ApiResponseABC
+
 
 @dataclass
-class ServerStatus(object):
+class ServerStatus(ApiResponseABC):
     """
     Represents server status.
 
@@ -22,7 +24,7 @@ class ServerStatus(object):
 
     status: str
     online: int
-    data: dict
+    data: dict  # noqa:WPS110
     server_id: str
     server_name: str
     server_address: str
@@ -34,63 +36,7 @@ class ServerStatus(object):
 
 
 @dataclass
-class ServerStart(object):
-    """
-    Represents server start data.
-
-    Attrs:
-        status: str
-        message: str
-    """
-
-    status: str
-    message: str
-
-
-@dataclass
-class ServerStop(object):
-    """
-    Represents server stop data.
-
-    Attrs:
-        status: str
-        message: str
-    """
-
-    status: str
-    message: str
-
-
-@dataclass
-class SeverRestart(object):
-    """
-    Represents server restart data.
-
-    Attrs:
-        status: str
-        message: str
-    """
-
-    status: str
-    message: str
-
-
-@dataclass
-class ServerChangeLevel(object):
-    """
-    Represents server changelevel.
-
-    Attrs:
-        status: str
-        message: str
-    """
-
-    status: str
-    message: str
-
-
-@dataclass
-class GetMaps(object):
+class GetMaps(ApiResponseABC):
     """
     Represents server maps.
 
@@ -104,21 +50,7 @@ class GetMaps(object):
 
 
 @dataclass
-class ConsoleCMD(object):
-    """
-    Represents server execute cmd.
-
-    Attrs:
-        status: str
-        message: str
-    """
-
-    status: str
-    message: str
-
-
-@dataclass
-class GetResources(object):
+class GetResources(ApiResponseABC):
     """
     Represents server resources.
 
@@ -147,17 +79,3 @@ class GetResources(object):
     disk_used: str
     disk_quota: str
     disk_proc: str
-
-
-@dataclass
-class ApiError(object):
-    """
-    Represents Api error.
-
-    Attrs:
-        status: str
-        message: str
-    """
-
-    status: str
-    message: str

@@ -13,12 +13,12 @@ git clone https://github.com/Twylixy/pymyarena.git
 Place core in the same directory of our project
 
 ```
-from core import Api
+from pymyarena.api import Api
 
 api = Api('token_here')
 response = api.status()
 
-print(response)
+print(response)  # noqa:WPS421
 # ServerStatus(status='OK', online=1, ...)
 ```
 

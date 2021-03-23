@@ -1,6 +1,6 @@
 # PyMyArena API (Core)
 
-This is a API Core for MyArena Server API ([myarena.ru](https://www.myarena.ru/))
+This is an API Core for MyArena Server API ([myarena.ru](https://www.myarena.ru/))
 
 ## Download
 

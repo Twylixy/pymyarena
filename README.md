@@ -10,7 +10,7 @@ git clone https://github.com/Twylixy/pymyarena.git
 
 ## How to use?
 
-Place core in the same directory of our project
+Place core in the same directory of your project
 
 ```
 from pymyarena.api import Api
